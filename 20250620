@@ -1,1 +1,64 @@
-오늘 배운 내용
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>620복습 및 테스트</title>
+</head>
+<body>
+    <!--620 풀스택_html 복습 및 테스트 코드-->
+    <h1>620 풀스택_html 복습 및 테스트 코드</h1>
+    <ol style="1">
+        <li>글자관련태그</li>
+        <li>목록관련태그</li>
+    </ol>
+<hr>
+    <p>1.글자 관련 태그에서 문단 영영을 나누는 p태그를 사용해서 나타내면
+        <br>
+        <strong>굵기</strong>,<i>기울기</i>
+        <br>
+        <mark>형광펜</mark>, <u>밑줄</u>, <small>작게</small>
+        <br>
+        <sub>아래첨자</sub>, <sup>윗첨자</sup>, <s>취소선</s>태그를 학습하였으며
+    </p>
+<hr>
+    <pre> 1.글자 관련 태그에서 문단 영영을 나누는 pre태그를 사용해서 나타내면
+        <br>
+        <strong>굵기</strong>,<i>기울기</i>
+        <br>
+        <mark>형광펜</mark>, <u>밑줄</u>, <small>작게</small>
+        <br>
+        <sub>아래첨자</sub>, <sup>윗첨자</sup>, <s>취소선</s>태그를 학습하였다.
+    </pre>
+<hr>
+    2.목록 관련 태그로는 
+    <br>
+    <ol reversed="reversed" style="1" start="9">
+        <li>순서 없는 목록 태그 ul</li>
+        <li>순서 있는 목록 태그 ol</li>
+        <li>영문 소문자로 표기 type a</li>
+        <li>영문 대문자로 표기 type A</li>
+        <li>로마 소문자로 표기 type i</li>
+        <li>로마 대문자로 표기 type I</li>
+        <li>시작 값 변경 type="숫자" start="숫자"</li>
+        <li>역순으로 항목 표기 reversed="reversed"</li>
+    </ol>
+    <br>
+    가 있다.
+<hr>
+    <P>
+    기타 학습 자료로는 주석태그<!---->
+    <br>
+        01_html 파일 주소창에서 cmd 입력 후 
+    <br>
+        code .  입력 시 해당 파일 vscode 접속 가능
+    <br>
+        alt + l + o 동시 입력 시 라이브 서버 생성
+    <br>
+        alt + shift 아래방향키 입력시 코드 복사
+    <br>
+        code ! or html : 5 입력시 html뼈대 완성
+    </P>
+    
+</body>
+</html>
