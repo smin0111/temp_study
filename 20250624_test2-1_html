@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07실습문제</title>
+    <style>
+        
+        #m{
+            width: 278px;
+            height: 160px;
+            border-radius: 8px;
+            background: #CA785C;
+        }
+        #img{
+            width: 278px;
+            height: 120px;
+            
+        }
+         #m1{
+            width: 278px;
+            height: 40px;
+         }
+         
+        #p{
+            font-size: 16px;
+            color: white;
+            font-weight: 700;
+            line-height: 100%;
+            letter-spacing: 0%;
+            margin-left: 20px ;
+            margin-top: 5px ;
+           
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="m">
+        <img id="img" src="sample/image/실습7번.jpg">
+            <div id="m1">
+               <P id="p">안녕하세요!</P>
+            </div>
+            </div>
+        
+
+
+    </div>
+  
+
+    
+
+</body>
+</html>
