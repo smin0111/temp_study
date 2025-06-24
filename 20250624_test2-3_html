@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08실습문제</title>
+    <style>
+        #m{
+            width: 160px;
+            height: 240px;
+            border-radius: 4px;
+            background: #CA785C;
+        }
+        #img{
+            width: 160px;
+            height: 172px;
+        }
+        #a1{
+            width: 100px;
+            height: 19px;
+
+        }
+        #p1{
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: -0.5%;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+       #a2{
+            width: 50px;
+            height: 17px;
+        }
+        #p2{
+             color: white;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: -0.5%;
+            margin-left: 5px;
+            
+        }
+       #a3{
+            width: 76px;
+            height: 17px;
+        }
+        #p3{
+             color: white;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: -0.5%;
+            margin-left: 80px;
+             margin-top: -27px;
+            
+        }
+    </style>
+</head>
+<body>
+        <div id="m">
+        <img id="img" src="sample/image/08실습문제.jpg">
+            <p id="p1">인테리어란?</p>
+            <p id="p2">김작가</p>
+            <p id="p3">2025.06.24</p>
+        </div>
+
+
+    </div>
+</body>
+</html>
