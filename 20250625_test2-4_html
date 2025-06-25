@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11번실습문제</title>
+    <style>
+    div{
+        width: 320px;
+        height: 320px;
+        background-image: url("sample/image/11번실습문제.jpg");
+        background-size: 150%;
+         background-position: 50% 50%;
+    }   
+    p{
+        color: white;
+        font-weight: 700;
+        font-size: 24px;
+        margin-left: 20px;
+        line-height: 3em;
+
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <p>인테리어 디자인</p>
+    </div>
+</body>
+</html>
