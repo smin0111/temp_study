@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15실습문제</title>
+    <style>
+        .idpw{
+            border-radius: 8px;
+            width: 278px;
+            height: 40px;
+            margin-top: 10px;
+            /* border: 2px; */
+            border-color: #C3C3C3;
+        }
+        #sm{
+            border-radius: 8px;
+            width: 278px;
+            height: 40px;
+            margin-top: 10px;
+            border: #17B75E;
+            background: #17B75E;
+            color: white;
+            font-size: 24px;
+            line-height: 100%;
+            font-weight: 700;
+            margin-top: -5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>로그인</h1>
+    <form action="">
+        <label for="">아이디</label>
+        <br>
+        <input type="userId" class="idpw">
+        <br>
+        <br>
+        <label for="">비밀번호</label>
+        <br>
+        <input type="password" class="idpw">
+        <br>
+        <br>
+        <input type="submit" id="sm" value="로그인">
+    </form>
+    
+</body>
+</html>
