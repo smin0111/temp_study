@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-1실습문제</title>
+    <style>
+        #hd1{
+            background: blue;
+            width: 700px;
+            height: 50px;
+        }
+        .c1{
+            display: inline-block;
+        }
+        #nv1{
+            background: red;
+            width: 100px;
+            height: 177px;
+            padding-top: 272px;
+        }
+        #st1{
+            background: green;
+            width: 500px;
+            height: 450px;
+            margin-left: -4px;
+        }
+        /* .c2{
+            display: block !important;
+        } */
+        #at1{
+            background:yellowgreen;
+            width: 400px;
+            height: 125px;
+             margin-left: 50px;
+        }
+        #at2{
+            background:pink;
+            width: 400px;
+            height: 125px;
+             margin-left: 50px;
+        }
+        #at3{
+            background:skyblue;
+            width: 400px;
+            height: 125px;
+             margin-left: 50px;
+        }
+        #as{
+            background: wheat;
+            width: 100px;
+            height: 177px;
+            padding-top: 272px;
+            margin-left: -3px;
+        }
+        #ft1{
+            background: purple;
+            width: 700px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+    <header id="hd1">header</header>
+    <nav class="c1" id="nv1">nav</nav>
+    <section class="c1" id="st1">section
+        <article class="c2" id="at1">article</article>
+        <article class="c2" id="at2">article</article>
+        <article class="c2" id="at3">article</article>
+    </section>
+    <aside class="c1" id="as">aside</aside>
+    <footer id="ft1">footer</footer>
+    </form>
+</body>
+</html>
