@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-2실습문제</title>
+    <style>
+        .c1{
+            display: inline-block;
+        }
+        #hd1{
+            background: blue;
+            width: 700px;
+            height: 50px;
+        }
+        #nv1{
+            background: red;
+            width: 500px;
+            height: 25px;
+            margin-left: 100px;
+            margin-top: 3px;
+        }
+        #st1{
+            background: green;
+            width: 700px;
+            height: 450px;
+        }
+        #as1{
+            background: wheat;
+            width: 150px;
+            height: 449px;
+            float: right;
+            display: inline;
+            margin-top: -442px;
+        
+        }
+         #at1{
+            background:yellowgreen;
+            width: 450px;
+            height: 140px;
+             margin-left: 50px;
+            
+        }
+        #at2{
+            background:pink;
+            width: 450px;
+            height: 140px;
+             margin-left: 50px;
+        }
+        #at3{
+            background:skyblue;
+            width: 450px;
+            height: 140px;
+             margin-left: 50px;
+        }
+        #ft1{
+            background: purple;
+            width: 700px;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="hd1">header
+        <nav id="nv1">nav</nav>
+    </header>
+        <section class="c1" id="st1"> section
+            <article id="at1">article</article>
+            <article id="at2">article</article>
+            <article id="at3">article</article>
+            <aside id="as1">
+            aside
+        </aside>
+        </section>
+
+    <footer id="ft1">footer</footer>
+
+    
+</body>
+</html>
