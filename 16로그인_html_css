@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16.로그인</title>
+    <style>
+        form{
+            width: 336px;
+            height: 148px;
+            border-radius: 8px;
+            border-style: solid;
+            border-color: #c3c3c3;
+        }
+        #p1{
+            margin-left: 25px;
+            margin-top: 30px;
+            font-size: 16px;
+        }
+        #sm{
+            border-radius: 8px;
+            width: 278px;
+            height: 40px;
+            border: #17B75E;
+            background: #17B75E;
+            color: white;
+            font-size: 24px;
+            line-height: 100%;
+            font-weight: 700;
+            margin-top: -10px;
+            margin-left: 25px;
+        }
+        #p2{
+            color: #C3c3c3;
+        }
+        div{
+            width: 336px;
+            height: 148px;
+            font-size: 14px;
+            display:inline-block;
+            padding-left: 50px;
+
+        }
+        span{
+            color: #C3c3c3;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <p id="p1">사이트를 더 안전하고 편리하게 이용하세요.</p>
+        <input type="submit" id="sm" value="로그인">
+        <div> 아이디 찾기 <span>|</span> 비밀번호 찾기 <span>|</span> 회원가입</div>
+    </form>
+</body>
+</html>
