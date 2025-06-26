@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17.새로운 시작!</title>
+    <style>
+    #img{
+        width: 300px;
+        height: 250px;
+        background-image: url("sample/image/17번실습문제.jpg");
+        background-size: 110%;
+        background-position: 40% 40%;
+        border-radius: 4%;
+    } 
+    #text{
+        width: 300px;
+        height: 56px;
+        background: rgba(0, 0, 0, 60%) ;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin-top: -68px;
+    }
+    #p1{
+        color: white;
+        margin-left: 10px;
+        padding-top: 5px;
+        font-weight: 700;
+        font-size: 12px;
+        
+    }
+    #p2{
+        color: #C3C3C3;
+        margin-left: 10px;
+        margin-top: -5px;
+        font-size: 12px;
+        font-weight: 700;
+    }
+    #c3{
+        width: 24px;
+        height: 24px;
+        background: #C3C3C3;
+        border-radius: 9999px;
+        margin-top: -230px;
+        margin-left: 260px;
+    }
+    </style>
+</head>
+<body>
+    <div id = "img">
+    </div>
+    <div id="text">
+        <p id="p1">새로운 시작!</p>
+        <p id="p2"> 김작가</p>
+    </div>
+    <div id="c3"></div>
+</body>
+</html>
