@@ -1,0 +1,128 @@
+//1
+function int(a){
+if(a % 2 ==0)
+    return('짝수입니다.');
+else
+    return('홀수입니다.');
+};
+console.log(int(6));
+
+
+
+
+
+
+
+
+//2
+var person = {
+    firstName: 'GilDong',
+    lastName: 'Hong',
+    age: 20
+};
+for(let prop in person){
+    console.log(prop,person[prop]);
+
+}
+
+
+
+
+
+
+
+
+
+
+//3
+function hap(a,b){
+  return (`${a}+${b}의 합은 ${a+b}입니다.`);
+};
+console.log(hap(4,5));
+
+
+
+
+
+
+
+
+
+//4
+greet = () => "Hello!";
+console.log(greet())
+
+getInfo = (val1, val2) =>  `name: ${val1}, age: ${val2}`;
+console.log(getInfo('이승민',26));
+
+
+
+
+
+
+
+
+
+//5
+function Person(name, age) {
+
+    this.name = name;
+    this.age = age;
+    this.sayHello= function(){
+        return `안녕하세요, 제 이름은${this.name}이고 나이는 ${this.age}세 입니다.`;
+    }
+}
+const person1 = new Person("이승민", 26);
+
+console.log(person1.sayHello());
+
+
+
+
+
+
+
+
+//6   
+const user = {
+   name : "koala",
+   age : 20
+};
+user.email = 'koala.ohgiraffers@gmail.com';
+user.age = 21;
+delete user.name;
+console.log(user);
+
+
+
+
+
+
+
+
+
+
+//7번
+const car = {
+    brand : 'sm',
+    color : 'red'
+};
+const fireCar = {
+    __proto__ : car
+
+};
+fireCar.color = 'green'
+
+for(let prop in fireCar) {
+    console.log(prop);
+
+    let isOwn = fireCar.hasOwnProperty(prop);
+
+    if(isOwn) {
+        console.log(`고유 프로퍼티 ${prop}`);
+     }   
+     else {
+            console.log(`상속 프로퍼티 ${prop}`);
+        }
+    
+};
