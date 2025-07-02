@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .figure1{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .figure2{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .figure3{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .circle{
+            border-radius: 50%;
+        }
+        .border{
+            border-radius: 8px
+        }
+    </style>
+</head>
+<body>
+    <pre>ul태그 안에 도형을 집어넣어라</pre>
+    <ul id="figure">
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="figure1"></div>
+    <div class="figure2"></div>
+    <div class="figure3"></div>
+
+    <script>
+        const $figure = document.getElementById('figure');
+        const $area1 = $figure.firstElementChild;
+        const $area2 = $figure.lastElementChild;
+        
+
+        const $figure1 = document.querySelector('.figure1');
+        const $figure2 = document.querySelector('.figure2');
+        const $figure3 = document.querySelector('.figure3');
+
+        $figure2.classList.add('circle');
+        $figure3.classList.add('border');
+
+      
+        $figure.replaceChild($figure1,$area1);
+        $figure.insertBefore($figure2,$area2);
+        $figure.replaceChild($figure3,$area2);
+
+
+    </script>
+    
+</body>
+</html>
