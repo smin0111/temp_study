@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>민식님 문제</title>
+</head>
+<body>
+    <label for="">사용자명</label>
+    <input type="text" name="sm" id="user" value="lsmmsl">
+    <button id="btn">비교하기</button>
+    <script>
+        const $user = document.getElementById('user');
+        const $btn = document.getElementById('btn');
+        const default_value = 'lsmmsl';
+
+        $btn.onclick = () => {
+                if($user.value === default_value){
+                alert('일치합니다!');
+                }
+                else
+                console.log('다릅니다!');
+                
+        }
+
+
+    </script>
+    
+
+</body>
+</html>
