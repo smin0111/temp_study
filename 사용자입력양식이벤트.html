@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .skyblue{ background: lightskyblue;}
+        .focused{ outline: 3px dashed skyblue;}
+        .focused1{ 
+                width: 100px;
+                height: 100px;
+            background: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <form name="userinput">
+        <label for="username">이름</label>
+        <br>
+        <input type="text" required placeholder="이름을 입력하세요" name="username" id="username"
+        style="width: 435px; height: 30px;">
+
+        <br><br>
+
+        <label>이메일</label>
+        <br>
+        <input type="email" name="useremail" id="useremail" placeholder="example@domain.com"
+        style="width: 435px; height: 30px;">
+
+        <br><br>
+
+        <label>성별</label>
+        <br>
+        <input type="radio" name="gender" id="male" value="m"><label for="male">남자</label>
+        <input type="radio" name="gender" id="female" value="f"><label for="female">여자</label>
+
+        <br><br>
+
+        <label>참여 일자 선택</label>
+        <br>
+        <select name="date" id="date" style="width: 440px; height: 30px;">
+            <option value="10">7월 7일</option>
+            <option value="20">7월 8일</option>
+            <option value="30">7월 9일</option>
+            <option value="" selected>-- 날짜 선택 --</option>
+        </select>
+
+        <br><br>
+
+        <label>요청 사항</label>
+        <br>
+        <textarea name="introduce" maxlength="500" id="introduce" placeholder="요청 사항을 입력하세요" rows="5" cols="60"
+        style="resize: none;"></textarea>
+        <br>
+        <span>0</span>/500자
+
+        <br><br>
+
+        <div id="area">
+        <input type="checkbox" id="cb" name="cb"><b>개인정보 수집에 동의합니다.</b>
+        </div>
+        <br><br>
+        <button type="submit" id="btn" >신청하기</button>
+    </form>
+
+    <script>
+        const $form = document.forms.userinput;
+
+        const $username = $form.username;
+        const $useremail = $form.useremail;
+        const $introduce = $form.introduce;
+        const $area = $form.area;
+        const $cb = $form.cb;
+        const $btn = $form.btn;
+
+        $form.addEventListener('focusin', (e) => e.target.classList.add('focused'));
+        $form.addEventListener('focusout', (e) => e.target.classList.remove('focused'));
+
+        $form.onsubmit = function(){
+            let keyword = this.querySelector('input[name=username]').value;
+            console.log(keyword);
+            if(!keyword) {
+                alert('이름을 입력하지 않았습니다');
+                return false;
+            }
+            
+            let dt = this.querySelector('select[name=date]').value;
+            console.log(dt);
+            if(!dt) {
+                alert('참여 일자를 선택해주세요.');
+                return false;
+            }
+        }
+        $introduce.addEventListener('input', (e) => {
+            let len = e.target.value.trim().length;     //앞,뒤 공백을 안 셈 trim()
+
+            $form.querySelector('span').textContent = len;
+        })
+
+        
+        
+    </script>
+    
+</body>
+</html>
