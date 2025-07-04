@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="usernum" id="usernum" value="">
+    <button type="button" id="btn">클릭</button>
+
+     <script>
+        const $usernum = document.getElementById('usernum');
+        const $btn = document.getElementById('btn');
+        
+        $btn.onclick = function(){
+            let input = (Number($usernum.value)+10);
+           alert(input);
+        }
+     </script>
+    
+</body>
+</html>
