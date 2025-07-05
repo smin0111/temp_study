@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>라이오버튼을 클릭하면 value값을 이요해 해당 사이트로 이동. </h1>
+        <input type="radio" id="rd1" value="https://www.naver.com">naver
+        <br>
+        <input type="radio" id="rd2" value="https://google.com">google
+        <br>
+        <input type="radio" id="rd3" value="https://www.w3schools.com">w3schools
+
+        <script>
+            const $rd1 = document.getElementById('rd1');
+
+            const $value1 = $rd1.value;
+            $rd1.addEventListener('change' ,() => location.href = $value1);
+        
+            const $rd2 = document.getElementById('rd2');
+            const $value2 = $rd2.value;
+            $rd2.addEventListener('change' ,() => location.href = $value2);
+
+            const $rd3 = document.getElementById('rd3');
+            const $value3 = $rd3.value;
+            $rd3.addEventListener('change' ,() => location.href = $value3);
+        </script>
+</body>
+</html>
