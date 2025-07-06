@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>버튼을 클릭하면, 첫번쨰 체크박스의 항목을 체크</h1>
+    <input type="checkbox"  value="Java">Java
+    <br>
+    <input type="checkbox" value="DataBase">DataBase
+    <br>
+    <input type="checkbox" value="Web">Web
+    <br>
+    <button id="btn">클릭</button>
+
+    <script>
+        const $btn = document.getElementById('btn');
+        // DOM에서 btn이라는 id를 가지고와 $btn이라는 변수에 저장
+        $btn.onclick = function () {
+            // 가지고 온 버튼이 클릭됐을 때 함수 실행
+            const fcb = document.querySelector('input[type=checkbox]');
+            // 변수 fcb = DOM에서 input[type=checkbox]를 찾아 저장
+            if(fcb) fcb.checked = true;
+            //만약 fcb가 존재하면 체그됨.
+        }
+    </script>
+</body>
+</html>
