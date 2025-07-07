@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,57 +67,79 @@
     </form>
 
     <script>
-        const $form = document.forms.userinput;
-
+        const $form = document.forms.userinput;   //변수작성
         const $username = $form.username;
         const $useremail = $form.useremail;
         const $introduce = $form.introduce;
         const $cb = $form.cb;
-        const $btn = $form.btn;
+        const $btn = $form.btn;                  //변수작성 끝
 
         $form.addEventListener('focusin', (e) => e.target.classList.add('focused'));
+        //폼 안에 포커스인 이벤트 추가, 포커스가 잡히면 (class focused)속성 추가
         $form.addEventListener('focusout', (e) => e.target.classList.remove('focused'));
+        //포커스가 빠져 나가면 (class focused)속성 제거
 
         $form.onsubmit = function(){
+			       //submit이 실행되엇을 때
             let keyword = this.querySelector('input[name=username]').value;
-            console.log(keyword);
+            // 변수 keyword에 input[name=username]의 value값 저장
+        
             if(!keyword) {
+            //만약 변수값이 없다면
                 alert('이름을 입력하지 않았습니다');
+                //알러트 문 출력
                 return false;
             }
             
             let dt = this.querySelector('select[name=date]').value;
-            console.log(dt);
+            // 변수 dt에 select[name=date]의 value값 저장.
             if(!dt) {
+            //dt 값이 없다면
                 alert('참여 일자를 선택해주세요.');
+                //알러트 문 출력
                 return false;
             }
 
             let ccb = this.querySelector('input[name=cb]').value;
+            //변수 ccb에 name이 cb인 input을(ckeckbox) 가지고와 변수에 저장
             if(!ccb.checked) {
+            //ccb가 체크된 상태가 아니라면
                 alert('개인정보 수집에 동의해주세요.');
+                //알러트 출력
                 return false;
             }
         }
         $introduce.addEventListener('input', (e) => {
+        //자기소개에 입력이벤트 추가
             let len = e.target.value.trim().length;
+            //입력된 문자의 글자 수를 셈
 
             $form.querySelector('span').textContent = len;
+            //변수 len은 span의 textContent 
+            //span.textContent = 0 = len 
+					  //즉, 글자를 입력하면 0이 len값을 받아 변환
         })
         
         $cb.addEventListener('change', function () {
+        //변수 $cb가 변할때,채크될때 아벤트 추가
             if (this.checked) {
+            //체크되면
                 document.getElementById('area').classList.add('focused1');
-            }   else {
+            }  //id area에 focused1(배경 색 변환)속성 추가
+             else {
                 document.getElementById('area').classList.remove('focused1');
-            }   
+            }   //그렇지 않으면 id area에 focused1(배경 색 변환)속성 제거
         });
 
         $btn.addEventListener('mouseover', () => {
+        //변수 $btn에 마우스가 올려졌을 때 이벤트 추가
             $btn.style.backgroundColor = 'darkblue';
+            //백그라운드 색상변경
         });
         $btn.addEventListener('mouseout', () => {
+        //마우스가 벗어났을 때 이벤트 추가
             $btn.style.backgroundColor = 'lightskyblue';
+            //백그라운드 색상 변경
         });       
     </script>
     
