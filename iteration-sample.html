@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        const { useState } = React;
+
+        function Todo() {
+            
+            const [todos, setTodos] = useState([
+                {id: 1, text: '할일 목록을 추가할 것', cancel : false}
+            ]);
+
+            const [inputText, setInputText] = useState('');
+
+            const [nextId, setNextId] = useState(2);
+            
+            const todoList = todos.map(todo => 
+            <li key={todo.id}>
+                <input type ="checkbox" 
+                checked={todo.cancel}
+                onChange={() => onToggle(todo.id)}
+                />
+                {todo.cancel ? <s>{todo.text}</s> : todo.text}
+                    <button onClick={() => onRemove(todo.id)}>제거</button>
+                </li>
+        )
+
+        const onToggle = (id) => {
+                const changedTodos = todos.map(todo =>
+                    todo.id === id ? {...todo, cancel: !todo.cancel} : todo
+                );
+                setTodos(changedTodos);
+            };
+
+            const onChangeHandler = e => setInputText(e.target.value);
+
+            const onClickHandler = () => {
+
+                const changedTodos = todos.concat({
+                    id : nextId,
+                    text : inputText
+                });
+
+                setNextId(nextId + 1);
+                setTodos(changedTodos);
+                setInputText('');
+            }
+
+            const onRemove = id => {
+                const changedTodos = todos.filter(todo => todo.id !== id);
+                setTodos(changedTodos);
+            }
+            
+            return (
+                <>
+                <div style={{
+                    background : 'black',
+                    width : '100%',
+                    heigth : '300px',
+                    padding : '10px',
+                    textAlign : 'center'
+                   
+                    }}>
+                        <h2 style={{color:'white'}}>오늘의 할일! {new Date().toLocaleDateString()}</h2>
+                    </div>
+                <div style={{
+                    position : 'fixed',
+                    left : '40%',
+                    top : '200px'
+                }}>
+                    <div style={{width : 300, border:'1px solid black'}}>
+                        <ul type="none">{todoList}</ul>
+                    </div>
+                    <input value={inputText} onChange={onChangeHandler}/>
+                    <button onClick={onClickHandler}>추가하기</button>
+                </div>
+
+                <div style={{
+                    background : 'black',
+                    width : '100%',
+                    heigth : '300px',
+                    padding : '10px',
+                    textAlign : 'center',
+                    position : 'fixed',
+                    bottom : 0
+                    
+                    }}>
+                    <h6 style={{color:'white'}}>Maker.seungmin6385@gmail.com</h6>
+                </div>
+                </>
+            );
+        }
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<Todo/>);
+
+    </script>
+    
+</body>
+</html>
