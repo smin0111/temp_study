@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        const userTyping = window.prompt("문자열을 입력해주세요.");
+
+        function App() {
+            const [inputValue, setInputValue] = useState('');
+            const [startTime, setStartTime] = useState(null);
+
+            const onChangeHandler = (e) => {
+                const value = e.target.value;
+ 
+                // 첫 타이핑 시작 시점 기록
+                if (startTime === null && value.length > 0) {
+                    setStartTime(Date.now());
+                }
+
+                // 오타 발생 시 타이머 초기화
+                if (!userTyping.startsWith(value)) {
+                    setStartTime(null);
+                }
+
+                setInputValue(value);
+            };
+
+            const onKeyDownHandler = (e) => {
+                if (e.key === 'Enter') {
+                    if (inputValue === userTyping && startTime !== null) {
+                        const endTime = Date.now();
+                        const elapsed = endTime - startTime; // ms 단위
+                        alert(`걸린 시간: ${elapsed} ms`);
+                    } else if (inputValue !== userTyping) {
+                        // 오타 상태에서 엔터 → 입력값, 타이머 초기화
+                        setInputValue('');
+                        setStartTime(null);
+                        e.preventDefault();
+                    }
+                }
+            };
+
+            return (
+                <>
+                    <h1>{userTyping}</h1>
+                    <input
+                        type="text"
+                        value={inputValue}
+                        onChange={onChangeHandler}
+                        onKeyDown={onKeyDownHandler}
+                    />
+                </>
+            );
+        }
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+</body>
+</html>
